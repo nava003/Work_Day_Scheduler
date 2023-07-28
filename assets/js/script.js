@@ -1,7 +1,42 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
-$(function () {
+$(document).ready(function () {
+  var currDay = dayjs();
+  $('#currentDay').html(`${currDay.format('dddd')},
+  ${currDay.format('MMMM/DD/YYYY')}<br>
+  ${currDay.format('hh:mm a')}`);
+
+  var placeholderLength = 24;
+
+  for (var i = 0; i < placeholderLength; i++) {
+    var divHourEl = $('<div>');
+    divHourEl.attr('id', `hour-${(i)}`);
+    divHourEl.addClass('row time-block');
+
+    if(currDay.isSame(dayjs())){
+      divHourEl.addClass('present');
+    }
+
+    var hourTextEl = $('<div>');
+    hourTextEl.addClass('col-2 col-md-1 hour text-center py-3')
+    if (i < (placeholderLength / 2)) {
+      hourTextEl.text(`${i}AM`);
+    } else {
+      hourTextEl.text(`${i}PM`);
+    }
+    divHourEl.append(hourTextEl);
+
+    $('.container-lg').append(divHourEl);
+  }
+  
+  console.log(currDay);
+  console.log(currDay.isSame(dayjs()));
+  console.log(dayjs());
+
+  $('.saveBtn').on('click', function () {
+    console.log(this);
+  });
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
