@@ -1,4 +1,4 @@
-# Module_5_Challenge
+# Work_Day_Scheduler
 
 ## User Story
 > `AS AN employee with a busy schedule`  
