@@ -31,7 +31,7 @@ The following animation demonstrates the application functionality:
 ![05-third-party-apis-homework-demo](https://github.com/nava003/Module_5_Challenge/assets/32070635/5a60311c-24c0-4721-b09c-70700d14e985)
 
 ## Student Result
-Link to Deployed Version: https://nava003.github.io/Module_5_Challenge/
+Link to Deployed Version: https://nava003.github.io/Work_Day_Scheduler/
   
 The following images are snapshots of Web API interacting with the user accordingly:  
 ![TPAPI_C5_IMG1](https://github.com/nava003/Module_5_Challenge/assets/32070635/0bb9920c-42b3-4e3d-91c7-687b91136a98)
